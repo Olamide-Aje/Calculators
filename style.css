@@ -8,7 +8,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(black, purple, black);
+    background: linear-gradient(black,  black);
 }
 .calculator{
     background: white;
@@ -63,6 +63,13 @@ button:hover{
     border-radius: 30px;
     color: white
 }
+.clear{
+    background-color: orange;
+    color:white
+}
+.clear:hover{
+    background-color: orange;
+}
 
 @media (max-width: 400px){
     .calculator{
@@ -78,3 +85,4 @@ button:hover{
         font-size: 1.2rem;
     }
 }
+
