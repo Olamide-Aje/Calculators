@@ -26,14 +26,18 @@ function deleteLast() {
     }
 }
 
+
 function calculate() {
     playSound();
     try {
-        display.textContent = eval(display.textContent);
+        // Convert 50% to (50/100) for percentage calculation
+        let expression = display.textContent.replace(/(\d+(\.\d+)?)%/g, '($1/100)');
+        display.textContent = eval(expression);
     } catch {
         display.textContent = 'Error';
     }
 }
+
 
 document.addEventListener('keydown', (event) => {
     const key = event.key;
